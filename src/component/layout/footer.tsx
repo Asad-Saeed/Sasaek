@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="space-y-6 text-start md:text-left">
               <Link
                 href="/"
-                className="inline-flex items-start  justify-center md:justify-start space-x-2"
+                className="inline-flex items-start justify-center md:justify-start space-x-2"
               >
                 <div className="relative w-24 h-8">
                   <div className="absolute inset-0 flex md:items-center">

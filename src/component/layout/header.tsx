@@ -118,22 +118,28 @@ export default function NavBar() {
                     </li>
                   ))}
                   <li>
-                    <Dropdown>
+                    {/* Language Selector */}
+                    <Dropdown className="bg-[#4C4C4C] text-[#FFFFFF]">
                       <DropdownTrigger>
-                        <button className="flex items-center gap-1.5 px-2 py-1 text-[14px] font-medium text-[#111827] rounded-md">
-                          <IoLanguageOutline className="w-[18px] h-[18px]" />
+                        <button className="bg-[#4C4C4C] flex items-center gap-1.5 px-2 py-1 text-[14px] font-medium text-[#FFFFFF] outline-none rounded-full">
                           <span>KOR</span>
                           <IoIosArrowDown className="w-3 h-3 ml-0.5" />
                         </button>
                       </DropdownTrigger>
                       <DropdownMenu
                         aria-label="Language selection"
-                        className="min-w-[100px]"
+                        className="w-full"
                       >
-                        <DropdownItem key="kor" className="text-[14px]">
+                        <DropdownItem
+                          key="kor"
+                          className="text-sm hover:bg-black/10"
+                        >
                           KOR
                         </DropdownItem>
-                        <DropdownItem key="eng" className="text-[14px]">
+                        <DropdownItem
+                          key="eng"
+                          className="text-sm hover:bg-black/10"
+                        >
                           ENG
                         </DropdownItem>
                       </DropdownMenu>
