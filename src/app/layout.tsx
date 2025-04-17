@@ -4,7 +4,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import HeroUIProvider from "@/component/common/provider/heroUIProvider";
 import Footer from "@/component/layout/footer";
-import NavBar from "@/component/layout/header";
+import Header from "@/component/layout/header";
 import { MediaQueriesProvider } from "@/component/common/hooks/mediaQuery";
 import ApploClientProvider from "@/component/common/provider/apploClientProvider";
 
@@ -50,7 +50,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <MediaQueriesProvider>
           <HeroUIProvider>
-            <NavBar />
+            <Header />
             <ApploClientProvider>{children}</ApploClientProvider>
             <Footer />
           </HeroUIProvider>

@@ -12,12 +12,10 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
-import { IoLanguageOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 
-export default function NavBar() {
+export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("KOR");
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
 
