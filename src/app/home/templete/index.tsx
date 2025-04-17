@@ -6,6 +6,8 @@ import Hero from "@/component/home/hero";
 import ActivitiesSection from "@/component/home/activities";
 import AppIntroSection from "@/component/home/appIntro";
 import DonationBanner from "@/component/home/donation";
+import PartnersSlider from "@/component/home/partners";
+
 export default function HomeTemplete() {
   return (
     <>
@@ -15,6 +17,7 @@ export default function HomeTemplete() {
       <ActivitiesSection />
       <DonationBanner />
       <AppIntroSection />
+      <PartnersSlider />
     </>
   );
 }

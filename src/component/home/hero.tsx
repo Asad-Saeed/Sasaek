@@ -35,8 +35,10 @@ const Hero = () => {
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
           loop={true}
+          speed={1000}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className="h-full w-full rounded-[32px] overflow-hidden"
         >
@@ -95,7 +97,7 @@ const Hero = () => {
           <div className="absolute bottom-8 md:bottom-3 left-1/2 -translate-x-1/2 md:left-auto md:right-5 md:translate-x-0 z-10 flex items-center gap-8">
             <div className="flex items-center">
               <div className="text-black text-sm font-medium">
-                <span className="opacity-100 pr-5">{activeIndex + 1}</span>
+                {/* <span className="opacity-100 pr-5">{activeIndex + 1}</span> */}
                 {/* <span className="opacity-50">/</span> */}
                 {/* <span className="opacity-50">2</span> */}
               </div>

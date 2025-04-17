@@ -95,3 +95,50 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Partner Slider Styles */
+.partners-swiper {
+  position: relative;
+  overflow: visible;
+}
+
+/* Hide default Swiper navigation buttons */
+.partners-swiper .swiper-button-next::after,
+.partners-swiper .swiper-button-prev::after {
+  display: none;
+}
+
+/* Custom navigation button styles */
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  width: 25px !important;
+  height: 25px !important;
+  margin: 0 !important;
+  background-color: #111111;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(17, 17, 17, 0.8);
+}
+
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Ensure proper slide visibility */
+.partners-swiper .swiper-slide {
+  height: auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 1024px) {
+  .partners-swiper {
+    padding: 0 !important;
+  }
+}
