@@ -35,7 +35,7 @@ const teamMembers: TeamMember[] = [
 const GreetingSection = () => {
   return (
     <Container className="px-5 md:px-16 lg:px-32">
-      <section className="w-full py-12 md:py-20">
+      <section className="w-full py-16 md:py-24">
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-12 lg:gap-20">
           {/* Left Content */}
