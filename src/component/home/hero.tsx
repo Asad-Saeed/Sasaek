@@ -1,89 +1,119 @@
-import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Image from "next/image";
-import imgText from "../../../public/assests/svg/textImg.svg";
-import imgComment from "../../../public/assests/svg/commentnewimage.svg";
-import imgGroup from "../../../public/assests/svg/homeherogroup.svg";
-import imgBar from "../../../public/assests/svg/barImage.svg";
-import { FaCircleChevronRight } from "react-icons/fa6";
-import { Button } from "@heroui/react";
 import Container from "../layout/container";
-import bg from "../../../public/assests/svg/bg.svg";
+import { useState } from "react";
 
-interface HeroProps {
-  homeData: any;
-}
+// Import the image
+import slider1 from "../../../public/assests/svg/slider1.svg";
 
-const Hero: React.FC<HeroProps> = ({ homeData }) => {
+const Hero = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
-    <div
-      className="w-full flex flex-col px-6 md:px-8 bg-cover rounded-xl bg-no-repeat"
-      style={{ backgroundImage: `url(${bg.src})` }}
-    >
-      <Container>
-        {/* Main Content Section */}
-        <div className=" mx-auto w-full font-pilat  flex flex-col md:flex-row items-stretch">
-          {/* Left - Text Content */}
-          <div className="w-full md:w-1/2 text-left items-start pt-12 md:pt-20">
-            <div className=" pt-9 flex flex-row  text-sm gap-5 text-[#523FFF]">
-              <p>🔥 The Next Big Thing</p>
-              <p>#1 Fitness Social Media App</p>
-            </div>
-            <h2 className="text-4xl text-black font-bold mb-4">
-              {homeData?.features[0]?.title || "Fitness Enthusiasts"}
-              {/* <span className="inline-block w-[50px] px-2 h-auto align-middle">
-                <Image src={imgText} alt="App Preview" width={50} height={50} />
-              </span> */}
-              {/* Fitness Enthusiasts */}
-            </h2>
-            <p className="text-sm mb-8 max-w-xl">
-              {homeData?.features[0]?.description}
-            </p>
-            <div className="relative">
-              <div className="absolute left-0 transform -translate-y-full bg-black text-[#5FDAF5] text-xs ml-5 px-1 py-1 rounded-md">
-                LIMITED
+    <Container className="px-5">
+      <section className="w-full h-[600px] border-[#E5E7EB] my-2">
+        <Swiper
+          modules={[Pagination, Navigation, Autoplay]}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination",
+            bulletClass: "swiper-pagination-bullet",
+            bulletActiveClass: "swiper-pagination-bullet-active",
+            renderBullet: function (index, className) {
+              return `<span class="${className} w-16 h-[2px] bg-white/30 hover:bg-white/50 transition-all duration-300"></span>`;
+            },
+          }}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          className="h-full w-full rounded-[32px] overflow-hidden"
+        >
+          <SwiperSlide>
+            <div className="relative h-full w-full">
+              <Image
+                src={slider1}
+                alt="Beach Reading"
+                fill
+                priority
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/30 to-transparent">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center w-full px-4 space-y-8">
+                  <span className="text-sm md:text-lg mb-2 md:mb-4 opacity-90 tracking-wider inline-block">
+                    특별한 나눔
+                  </span>
+                  <h1 className="text-3xl md:text-5xl font-medium mb-1 md:mb-2 leading-tight">
+                    함께하는 마음이 만드는 소중한 변화
+                  </h1>
+                  <p className="text-base md:text-lg opacity-90">
+                    즐거움과 나눔이 있는 감동의 순간
+                  </p>
+                </div>
               </div>
-              <Button className="relative inline-flex items-center px-3 font-extrabold py-2 text-white bg-[#523FFF] rounded-2xl text-sm transition-all">
-                JOIN OUR BETA TESTING
-                <FaCircleChevronRight className="ml-2 rounded-full text-[#5FDAF5] bg-black h-7 w-7" />
-              </Button>
+            </div>
+          </SwiperSlide>
+
+          {/* Second Slide - Duplicate */}
+          <SwiperSlide>
+            <div className="relative h-full w-full">
+              <Image
+                src={slider1}
+                alt="Beach Reading"
+                fill
+                className="object-cover"
+              />
+              {/* Content Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/30 to-transparent">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center w-full px-4 space-y-8">
+                  <span className="text-sm md:text-lg mb-2 md:mb-4 opacity-90 tracking-wider inline-block">
+                    특별한 나눔
+                  </span>
+                  <h1 className="text-3xl md:text-5xl font-medium mb-1 md:mb-2 leading-tight">
+                    함께하는 마음이 만드는 소중한 변화
+                  </h1>
+                  <p className="text-base md:text-lg opacity-90">
+                    즐거움과 나눔이 있는 감동의 순간
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          {/* Navigation, Pagination, and Slide Numbers */}
+          <div className="absolute bottom-8 md:bottom-3 left-1/2 -translate-x-1/2 md:left-auto md:right-5 md:translate-x-0 z-10 flex items-center gap-8">
+            <div className="flex items-center">
+              <div className="text-black text-sm font-medium">
+                <span className="opacity-100 pr-5">{activeIndex + 1}</span>
+                {/* <span className="opacity-50">/</span> */}
+                {/* <span className="opacity-50">2</span> */}
+              </div>
+              <div className="custom-pagination flex gap-2"></div>
+            </div>
+            <div className="flex gap-2">
+              <button className="swiper-button-prev w-12 h-12 flex items-center justify-center bg-black rounded-full hover:bg-black/80 transition-all duration-300">
+                <MdArrowBack className="w-6 h-6 text-white" />
+              </button>
+              <button className="swiper-button-next w-12 h-12 flex items-center justify-center bg-black rounded-full hover:bg-black/80 transition-all duration-300">
+                <MdArrowForward className="w-6 h-6 text-white" />
+              </button>
             </div>
           </div>
-
-          {/* Middle - Comment Image */}
-          <div className="w-full md:w-1/3 flex justify-center items-center">
-            <Image
-              src={imgComment}
-              alt="Comment Section"
-              width={350}
-              height={350}
-            />
-          </div>
-
-          {/* Right - Group Image */}
-          <div className="w-full md:w-1/3 flex justify-center items-center">
-            <Image
-              src={
-                homeData?.features[0]?.images[0]?.url
-                  ? homeData?.features[0]?.images[0]?.url
-                  : imgGroup
-              }
-              alt="Group Section"
-              width={400}
-              height={600}
-            />
-          </div>
-        </div>
-      </Container>
-
-      {/* Bottom Bar Image */}
-      <Image
-        src={imgBar}
-        width={100}
-        height={100}
-        alt="Bottom Bar"
-        className="w-full md:-mt-40 -mt-20 h-full object-cover"
-      />
-    </div>
+        </Swiper>
+      </section>
+    </Container>
   );
 };
+
 export default Hero;

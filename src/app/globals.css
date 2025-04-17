@@ -69,3 +69,22 @@ body {
   background: var(--background);
   font-family: "Pilat Extended", sans-serif;
 }
+
+/* Custom Swiper Pagination Styles */
+.swiper-pagination-bullet {
+  @apply w-16 h-[2px] bg-black/30 rounded-none inline-block mx-1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-black !important;
+}
+
+.custom-pagination {
+  @apply flex items-center !important;
+}
+
+/* Hide default Swiper navigation buttons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
