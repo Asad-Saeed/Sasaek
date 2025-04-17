@@ -28,8 +28,8 @@ const pilatExtended = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Gymstar",
-  description: "Gymstar",
+  title: "Sasaek",
+  description: "Sasaek",
 };
 
 export default function RootLayout({

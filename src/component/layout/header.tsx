@@ -97,7 +97,7 @@ export default function Header() {
 
           {/* Mobile Menu */}
           {menuOpen && (
-            <div className="absolute top-[64px] left-0 right-0 bg-white border-b border-[#E5E7EB] md:hidden">
+            <div className="absolute top-[64px] left-0 right-0 bg-white border-b border-[#E5E7EB] md:hidden z-10">
               <div className="px-4 py-3">
                 <ul className="space-y-4">
                   {navLinks.map((link) => (
