@@ -8,8 +8,8 @@ import { FaArrowRight } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#222222]">
-      <Container>
-        <div className="flex flex-col lg:flex-row justify-between py-12 px-4 md:px-16 lg:px-32">
+      <Container className="px-5 md:px-16 lg:px-32">
+        <div className="flex flex-col lg:flex-row justify-between py-12">
           {/* Left Section */}
           <div className="flex flex-col space-y-4 max-w-[640px]">
             {/* Logo */}

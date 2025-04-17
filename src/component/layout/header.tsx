@@ -26,9 +26,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full border-b border-[#E5E7EB]">
-      <Container>
-        <nav className="flex items-center justify-between h-[64px] px-4 lg:px-6">
+    <header className="w-full border-[#E5E7EB]">
+      <Container className="px-5">
+        <nav className="flex items-center justify-between h-[64px]">
           {/* Logo with Text */}
           <Link href="/" className="flex items-center gap-2">
             <Image
