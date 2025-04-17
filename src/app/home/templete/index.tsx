@@ -3,6 +3,7 @@ import React from "react";
 import AboutIntro from "@/component/home/about";
 import GreetingSection from "@/component/home/greeting";
 import Hero from "@/component/home/hero";
+import ActivitiesSection from "@/component/home/activities";
 import AppIntroSection from "@/component/home/appIntro";
 
 export default function HomeTemplete() {
@@ -11,6 +12,7 @@ export default function HomeTemplete() {
       <Hero />
       <AboutIntro />
       <GreetingSection />
+      <ActivitiesSection />
       <AppIntroSection />
     </>
   );
