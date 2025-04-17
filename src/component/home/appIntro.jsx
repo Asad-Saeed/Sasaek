@@ -8,7 +8,7 @@ const AppIntroSection = () => {
   return (
     <Container className="px-5 md:px-16 lg:px-32">
       <section className="w-full py-16 md:py-24">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-2">
           {/* Left Content */}
           <div className="flex-1 space-y-8">
             <div className="flex items-center gap-4">
@@ -38,7 +38,7 @@ const AppIntroSection = () => {
               </div>
 
               <div>
-                <p className="text-[#111111] font-medium my-12">
+                <p className="text-[#111111] font-medium my-6 md:my-12">
                   2025. 6. 출시 예정 커뮤니티 APP '소소담담'
                 </p>
                 <button className="px-4 py-3 border border-[#111111] rounded-full text-sm text-[#111111] hover:bg-[#111111] hover:text-white transition-all duration-300 flex items-center gap-2">
@@ -55,7 +55,7 @@ const AppIntroSection = () => {
               src={appScreen}
               alt="App Screenshot"
               fill
-              className="object-contain"
+              className="object-contain md:object-right"
               priority
             />
           </div>
