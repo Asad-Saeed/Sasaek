@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={pilatExtended.variable}>
-      <body className={`antialiased`}>
+      <body className={`antialiased bg-[#FFFFFF]`}>
         <MediaQueriesProvider>
           <HeroUIProvider>
             <Header />

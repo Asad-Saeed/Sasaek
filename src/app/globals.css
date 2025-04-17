@@ -4,7 +4,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
 }
 
 @layer base {
@@ -87,4 +87,11 @@ body {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
+}
+
+/* font */
+.font-korean {
+  font-feature-settings: "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

@@ -16,7 +16,7 @@ const Hero = () => {
 
   return (
     <Container className="px-5">
-      <section className="w-full h-[600px] border-[#E5E7EB] my-2">
+      <section className="w-full h-[410px] md:h-[600px] border-[#E5E7EB] my-2">
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           pagination={{
