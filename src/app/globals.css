@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@layer base {
+  .cls-text-base {
+    @apply text-base font-light font-pilat text-secondary px-3 md:px-5 leading-6;
+  }
+  .cls-text-heading {
+    @apply text-4xl md:text-5xl font-bold text-secondary px-3 md:px-5 my-3 md:my-6;
+  }
+  .cls-input-field {
+    @apply rounded-full h-10 text-sm px-4 py-2 w-full;
+  }
+  .cls-input-field-textarea {
+    @apply rounded-xl h-32 text-sm px-4 py-2 w-full;
+  }
+  .cls-input-field-error {
+    @apply text-red-500 ml-1.5 mt-0.5 text-start text-xs;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+/* Font declarations */
+@font-face {
+  font-family: "Pilat Extended";
+  src: url("/fonts/pilat-extended/PilatExtended-Light.woff") format("woff"),
+    url("/fonts/pilat-extended/PilatExtended-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat Extended";
+  src: url("/fonts/pilat-extended/PilatExtended-Regular.woff") format("woff"),
+    url("/fonts/pilat-extended/PilatExtended-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat Extended";
+  src: url("/fonts/pilat-extended/PilatExtended-Bold.woff") format("woff"),
+    url("/fonts/pilat-extended/PilatExtended-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: var(--font-pilat-extended);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Pilat Extended", sans-serif;
+}
