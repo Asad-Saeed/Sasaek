@@ -1,8 +1,9 @@
 "use client";
+import React from "react";
 import AboutIntro from "@/component/home/about";
 import GreetingSection from "@/component/home/greeting";
 import Hero from "@/component/home/hero";
-import React from "react";
+import AppIntroSection from "@/component/home/appIntro";
 
 export default function HomeTemplete() {
   return (
@@ -10,6 +11,7 @@ export default function HomeTemplete() {
       <Hero />
       <AboutIntro />
       <GreetingSection />
+      <AppIntroSection />
     </>
   );
 }
